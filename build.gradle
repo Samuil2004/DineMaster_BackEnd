@@ -1,0 +1,94 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id "org.sonarqube" version "5.1.0.4882"
+    id 'jacoco'
+    id 'org.flywaydb.flyway' version '10.20.1'
+}
+
+group = 'nl.fontys.s3'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+sonarqube {
+    properties {
+        property "sonar.projectKey", "DineMasterPro"
+        property "sonar.projectName", "DineMasterPro"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.token", "sqp_deb86bf4e2ba7c1f8c861f0ad42b34a6f8c39777"
+    }
+}
+
+flyway {
+    url = 'jdbc:mysql://sql8.freesqldatabase.com:3306/sql8758370'
+    user = 'sql8758370'
+    password = 'tu8pdpCBn7'
+}
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'mysql:mysql-connector-java:8.0.30'
+
+
+    implementation 'org.flywaydb:flyway-core:10.20.1'
+    //implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-mysql'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    testRuntimeOnly 'com.h2database:h2'
+
+    runtimeOnly 'com.h2database:h2'
+
+    implementation 'com.cloudinary:cloudinary-core:2.0.0'
+    implementation 'com.cloudinary:cloudinary-http5:2.0.0' // Cloudinary HTTP5 dependency
+    implementation 'com.cloudinary:cloudinary-taglib:2.0.0' // Cloudinary Taglib dependency
+    implementation 'io.github.cdimascio:dotenv-java:2.2.4' // Dotenv Java dependency
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+    //For the api for the address validation
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    //Used for deserialization (converting JSON data objects to Java objects)
+
+
+    //Spring security (from assignment doc)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    //For mailing system
+    implementation 'org.springframework.boot:spring-boot-starter-mail:3.4.1'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

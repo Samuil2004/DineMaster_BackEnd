@@ -1,0 +1,8 @@
+package nl.fontys.s3.dinemasterbackend.business.order_use_cases;
+
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetSelectedItemsInOrdersByCategoryAndStatusRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetSelectedItemsInOrdersByCategoryAndStatusResponse;
+
+public interface GetSelectedItemsInOrdersByCategoryAndStatus {
+    GetSelectedItemsInOrdersByCategoryAndStatusResponse getSelectedItemsInOrdersByCategoryAndStatus(GetSelectedItemsInOrdersByCategoryAndStatusRequest request);
+}
