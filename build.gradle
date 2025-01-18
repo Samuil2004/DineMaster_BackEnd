@@ -72,6 +72,9 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind'
     //Used for deserialization (converting JSON data objects to Java objects)
 
+    //New location API
+    implementation 'com.opencagedata:jopencage:2.2.2'
+
 
     //Spring security (from assignment doc)
     implementation 'org.springframework.boot:spring-boot-starter-security'
