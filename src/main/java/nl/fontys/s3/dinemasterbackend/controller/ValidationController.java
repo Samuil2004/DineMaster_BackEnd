@@ -55,6 +55,7 @@ public class ValidationController {
             URL url = new URL(nominatimURL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
+            conn.setRequestProperty("User-Agent", "DineMasterPro/1.0");
 
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String inputLine;
