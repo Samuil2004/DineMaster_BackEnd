@@ -1,13 +1,13 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.converters.OrderConverter;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.GetOrdersForCustomerRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.GetOrdersResponse;
-import nl.fontys.s3.dinemasterpro.domain.classes.Order;
-import nl.fontys.s3.dinemasterpro.domain.classes.OrderStatus;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderStatusEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.converters.OrderConverter;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetOrdersForCustomerRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetOrdersResponse;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Order;
+import nl.fontys.s3.dinemasterbackend.domain.classes.OrderStatus;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderStatusEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,6 +20,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

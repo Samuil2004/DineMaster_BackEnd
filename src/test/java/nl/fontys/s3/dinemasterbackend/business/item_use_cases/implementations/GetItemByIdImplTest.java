@@ -1,15 +1,15 @@
 package nl.fontys.s3.dinemasterbackend.business.item_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.converters.ItemConverter;
-import nl.fontys.s3.dinemasterpro.business.dtos.create.items.CreateAppetizerRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.create.items.CreateItemRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.create.items.CreatePizzaRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.items.GetItemByIdRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.items.GetItemByIdResponse;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.domain.classes.*;
-import nl.fontys.s3.dinemasterpro.persistence.entity.*;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.ItemEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.converters.ItemConverter;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.items.CreateAppetizerRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.items.CreateItemRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.items.CreatePizzaRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.items.GetItemByIdRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.items.GetItemByIdResponse;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.domain.classes.*;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.ItemEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

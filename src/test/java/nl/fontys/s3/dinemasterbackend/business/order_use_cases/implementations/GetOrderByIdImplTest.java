@@ -1,12 +1,12 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.converters.OrderConverter;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.GetOrderByIdRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.GetOrderByIdResponse;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.domain.classes.Order;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.converters.OrderConverter;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetOrderByIdRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.GetOrderByIdResponse;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Order;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

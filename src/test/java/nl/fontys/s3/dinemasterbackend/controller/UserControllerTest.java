@@ -1,10 +1,10 @@
 package nl.fontys.s3.dinemasterbackend.controller;
 
 
-import nl.fontys.s3.dinemasterpro.configuration.security.auth.RequestAuthenticatedUserProvider;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.AccessToken;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.implementations.AccessTokenImpl;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.UserEntityRepository;
+import nl.fontys.s3.dinemasterbackend.configuration.security.auth.RequestAuthenticatedUserProvider;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.AccessToken;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.implementations.AccessTokenImpl;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.UserEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

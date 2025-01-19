@@ -1,15 +1,15 @@
 package nl.fontys.s3.dinemasterbackend.controller;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.create.items.*;
-import nl.fontys.s3.dinemasterpro.business.dtos.update.items.*;
-import nl.fontys.s3.dinemasterpro.domain.classes.Appetizer;
-import nl.fontys.s3.dinemasterpro.domain.classes.Beverage;
-import nl.fontys.s3.dinemasterpro.domain.classes.ItemCategory;
-import nl.fontys.s3.dinemasterpro.persistence.entity.AppetizerEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.ItemCategoryEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.ItemEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.ItemCategoryRepository;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.ItemEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.items.*;
+import nl.fontys.s3.dinemasterbackend.business.dtos.update.items.*;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Appetizer;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Beverage;
+import nl.fontys.s3.dinemasterbackend.domain.classes.ItemCategory;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.AppetizerEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.ItemCategoryEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.ItemEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.ItemCategoryRepository;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.ItemEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

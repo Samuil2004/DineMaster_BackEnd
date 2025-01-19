@@ -1,7 +1,8 @@
 package nl.fontys.s3.dinemasterbackend.repositories;
 
 import jakarta.persistence.EntityManager;
-import nl.fontys.s3.dinemasterpro.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderDeliveryRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

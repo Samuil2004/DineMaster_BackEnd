@@ -1,7 +1,7 @@
 package nl.fontys.s3.dinemasterbackend.business.converters;
 
-import nl.fontys.s3.dinemasterpro.domain.classes.SelectedItemStatusOfPreparation;
-import nl.fontys.s3.dinemasterpro.persistence.entity.SelectedItemStatusOfPreparationEntity;
+import nl.fontys.s3.dinemasterbackend.domain.classes.SelectedItemStatusOfPreparation;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.SelectedItemStatusOfPreparationEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

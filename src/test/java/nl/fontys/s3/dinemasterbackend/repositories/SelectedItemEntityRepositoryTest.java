@@ -1,7 +1,8 @@
 package nl.fontys.s3.dinemasterbackend.repositories;
 
 import jakarta.persistence.EntityManager;
-import nl.fontys.s3.dinemasterpro.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.SelectedItemEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,6 +13,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest

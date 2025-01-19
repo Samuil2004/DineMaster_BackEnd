@@ -1,12 +1,12 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.CheckForCustomerActiveOrderRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.orders_and_carts.CheckForCustomerActiveOrderResponse;
-import nl.fontys.s3.dinemasterpro.business.exceptions.AccessDenied;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.implementations.AccessTokenImpl;
-import nl.fontys.s3.dinemasterpro.persistence.entity.CustomerEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.CheckForCustomerActiveOrderRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.orders_and_carts.CheckForCustomerActiveOrderResponse;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.AccessDenied;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.implementations.AccessTokenImpl;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.CustomerEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

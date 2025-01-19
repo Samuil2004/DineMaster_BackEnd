@@ -1,12 +1,12 @@
 package nl.fontys.s3.dinemasterbackend.controller;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.create.users.CreateCustomerRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.create.users.CreateUserResponse;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.AccessTokenResponse;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.users.AuthenticateUserRequest;
-import nl.fontys.s3.dinemasterpro.business.user_use_cases.AuthenticateUser;
-import nl.fontys.s3.dinemasterpro.business.user_use_cases.CreateUser;
-import nl.fontys.s3.dinemasterpro.configuration.security.auth.RequestAuthenticatedUserProvider;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.users.CreateCustomerRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.create.users.CreateUserResponse;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.AccessTokenResponse;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.users.AuthenticateUserRequest;
+import nl.fontys.s3.dinemasterbackend.business.user_use_cases.AuthenticateUser;
+import nl.fontys.s3.dinemasterbackend.business.user_use_cases.CreateUser;
+import nl.fontys.s3.dinemasterbackend.configuration.security.auth.RequestAuthenticatedUserProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,10 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 
@@ -29,6 +28,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
+
 class AuthControllerTest {
     @Autowired
     private MockMvc mockMvc;

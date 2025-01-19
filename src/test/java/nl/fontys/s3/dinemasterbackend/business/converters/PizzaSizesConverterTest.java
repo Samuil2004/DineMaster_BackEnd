@@ -1,13 +1,15 @@
 package nl.fontys.s3.dinemasterbackend.business.converters;
 
-import nl.fontys.s3.dinemasterpro.domain.classes.PizzaSize;
-import nl.fontys.s3.dinemasterpro.persistence.entity.PizzaSizeEntity;
+import nl.fontys.s3.dinemasterbackend.domain.classes.PizzaSize;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.PizzaSizeEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.context.ActiveProfiles;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")

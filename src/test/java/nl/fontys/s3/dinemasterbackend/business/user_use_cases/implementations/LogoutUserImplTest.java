@@ -1,11 +1,11 @@
 package nl.fontys.s3.dinemasterbackend.business.user_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.update.users.LogOutUserRequest;
-import nl.fontys.s3.dinemasterpro.business.exceptions.AccessDenied;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.AccessToken;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.implementations.AccessTokenImpl;
-import nl.fontys.s3.dinemasterpro.persistence.entity.RefreshTokenEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.RefreshTokenEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.update.users.LogOutUserRequest;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.AccessDenied;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.AccessToken;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.implementations.AccessTokenImpl;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.RefreshTokenEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.RefreshTokenEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

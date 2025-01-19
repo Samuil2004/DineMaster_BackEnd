@@ -1,12 +1,12 @@
 package nl.fontys.s3.dinemasterbackend.controller;
 
-import nl.fontys.s3.dinemasterpro.configuration.security.auth.RequestAuthenticatedUserProvider;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.AccessToken;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.implementations.AccessTokenImpl;
-import nl.fontys.s3.dinemasterpro.domain.classes.*;
-import nl.fontys.s3.dinemasterpro.persistence.entity.*;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.CartEntityRepository;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderEntityRepository;
+import nl.fontys.s3.dinemasterbackend.configuration.security.auth.RequestAuthenticatedUserProvider;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.AccessToken;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.implementations.AccessTokenImpl;
+import nl.fontys.s3.dinemasterbackend.domain.classes.*;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.CartEntityRepository;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,10 +1,11 @@
 package nl.fontys.s3.dinemasterbackend.repositories;
 
 import jakarta.persistence.EntityManager;
-import nl.fontys.s3.dinemasterpro.persistence.entity.CustomerEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderStatusEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.RoleEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.CustomerEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderStatusEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.RoleEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

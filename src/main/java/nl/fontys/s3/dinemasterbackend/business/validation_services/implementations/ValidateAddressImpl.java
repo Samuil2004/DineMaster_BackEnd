@@ -4,24 +4,19 @@ import com.opencagedata.jopencage.JOpenCageGeocoder;
 import com.opencagedata.jopencage.model.JOpenCageForwardRequest;
 import com.opencagedata.jopencage.model.JOpenCageLatLng;
 import com.opencagedata.jopencage.model.JOpenCageResponse;
-import lombok.AllArgsConstructor;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressRequest;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressResponse;
 import nl.fontys.s3.dinemasterbackend.business.validation_services.ValidateAddress;
-import org.cloudinary.json.JSONArray;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.util.UriUtils;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 @Service
-@AllArgsConstructor
 public class ValidateAddressImpl implements ValidateAddress {
-
+    private final String apiKey;
+    public ValidateAddressImpl(@Value("${openCage.key}") String apiKey) {
+        this.apiKey = apiKey;
+    }
 
     @Override
     public ValidateAddressResponse isAddressValid(ValidateAddressRequest validationRequest) {
@@ -31,7 +26,7 @@ public class ValidateAddressImpl implements ValidateAddress {
                 + validationRequest.getPostalCode() + ", "
                 + validationRequest.getCountry();
 
-        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder("bbe24e79785a4c44b59bf417e2174cb0");
+        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(apiKey);
         JOpenCageForwardRequest request = new JOpenCageForwardRequest(address);
         //request.setRestrictToCountryCode("za"); // restrict results to a specific country
         //request.setBounds(18.367, -34.109, 18.770, -33.704); // restrict results to a geographic bounding box (southWestLng, southWestLat, northEastLng, northEastLat)

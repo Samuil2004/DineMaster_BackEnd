@@ -1,9 +1,10 @@
 package nl.fontys.s3.dinemasterbackend.repositories;
 
 import jakarta.persistence.EntityManager;
-import nl.fontys.s3.dinemasterpro.persistence.entity.ItemCategoryEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.PizzaEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.PizzaSizeEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.ItemCategoryEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.PizzaEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.PizzaSizeEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.ItemEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

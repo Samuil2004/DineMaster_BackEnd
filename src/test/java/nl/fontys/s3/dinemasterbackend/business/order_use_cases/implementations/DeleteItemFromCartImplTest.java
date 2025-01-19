@@ -1,13 +1,13 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.delete.DeleteItemFromCartRequest;
-import nl.fontys.s3.dinemasterpro.business.exceptions.AccessDenied;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.AccessToken;
-import nl.fontys.s3.dinemasterpro.configuration.security.token.implementations.AccessTokenImpl;
-import nl.fontys.s3.dinemasterpro.persistence.entity.*;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.CartEntityRepository;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.SelectedItemEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.delete.DeleteItemFromCartRequest;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.AccessDenied;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.AccessToken;
+import nl.fontys.s3.dinemasterbackend.configuration.security.token.implementations.AccessTokenImpl;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.*;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.CartEntityRepository;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.SelectedItemEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

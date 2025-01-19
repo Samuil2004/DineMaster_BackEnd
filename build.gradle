@@ -20,15 +20,16 @@ sonarqube {
         property "sonar.projectKey", "DineMasterPro"
         property "sonar.projectName", "DineMasterPro"
         property "sonar.host.url", "http://localhost:9000"
-        property "sonar.token", "sqp_deb86bf4e2ba7c1f8c861f0ad42b34a6f8c39777"
+        property "sonar.token", System.getenv("SONARQUBE_TOKEN")
     }
 }
 
 flyway {
-    url = 'jdbc:mysql://sql8.freesqldatabase.com:3306/sql8758370'
-    user = 'sql8758370'
-    password = 'tu8pdpCBn7'
+    url = System.getenv("SPRING_DATASOURCE_URL")
+    user = System.getenv("SPRING_DATASOURCE_USERNAME")
+    password = System.getenv("SPRING_DATASOURCE_PASSWORD")
 }
+
 jacocoTestReport {
     reports {
         xml.required = true
@@ -90,6 +91,9 @@ dependencies {
 
     //For mailing system
     implementation 'org.springframework.boot:spring-boot-starter-mail:3.4.1'
+
+    implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+
 }
 
 tasks.named('test') {

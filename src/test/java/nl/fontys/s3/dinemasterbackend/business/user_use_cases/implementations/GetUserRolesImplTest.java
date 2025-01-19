@@ -1,8 +1,8 @@
 package nl.fontys.s3.dinemasterbackend.business.user_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.get.users.GetUserRolesResponse;
-import nl.fontys.s3.dinemasterpro.persistence.entity.RoleEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.UserRoleEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.users.GetUserRolesResponse;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.RoleEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.UserRoleEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

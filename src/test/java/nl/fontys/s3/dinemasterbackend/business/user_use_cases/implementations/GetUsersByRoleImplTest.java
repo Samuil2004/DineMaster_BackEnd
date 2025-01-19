@@ -1,18 +1,18 @@
 package nl.fontys.s3.dinemasterbackend.business.user_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.domain.classes.Customer;
-import nl.fontys.s3.dinemasterpro.domain.enumerations.UserRole;
-import nl.fontys.s3.dinemasterpro.persistence.entity.CustomerEntity;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Customer;
+import nl.fontys.s3.dinemasterbackend.domain.enumerations.UserRole;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.CustomerEntity;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.ActiveProfiles;
-import nl.fontys.s3.dinemasterpro.business.converters.UserConverter;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.users.GetUserByRoleRequest;
-import nl.fontys.s3.dinemasterpro.business.dtos.get.users.GetUserByRoleResponse;
-import nl.fontys.s3.dinemasterpro.persistence.entity.RoleEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.UserEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.UserEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.converters.UserConverter;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.users.GetUserByRoleRequest;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.users.GetUserByRoleResponse;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.RoleEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.UserEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.UserEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

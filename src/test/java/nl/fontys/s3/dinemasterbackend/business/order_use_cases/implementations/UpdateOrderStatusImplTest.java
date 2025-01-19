@@ -1,11 +1,11 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.update.orders.UpdateOrderStatusRequest;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.OrderStatusEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderEntityRepository;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.OrderStatusEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.update.orders.UpdateOrderStatusRequest;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.OrderStatusEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderEntityRepository;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.OrderStatusEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

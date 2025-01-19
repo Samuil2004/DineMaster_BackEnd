@@ -1,11 +1,11 @@
 package nl.fontys.s3.dinemasterbackend.business.converters;
 
-import nl.fontys.s3.dinemasterpro.domain.classes.Cart;
-import nl.fontys.s3.dinemasterpro.domain.classes.SelectedItem;
-import nl.fontys.s3.dinemasterpro.domain.classes.SelectedPizza;
-import nl.fontys.s3.dinemasterpro.persistence.entity.CartEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.SelectedItemEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.SelectedPizzaEntity;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Cart;
+import nl.fontys.s3.dinemasterbackend.domain.classes.SelectedItem;
+import nl.fontys.s3.dinemasterbackend.domain.classes.SelectedPizza;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.CartEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.SelectedItemEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.SelectedPizzaEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

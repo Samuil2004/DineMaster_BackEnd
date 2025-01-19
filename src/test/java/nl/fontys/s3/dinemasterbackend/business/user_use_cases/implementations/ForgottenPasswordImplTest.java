@@ -1,10 +1,10 @@
 package nl.fontys.s3.dinemasterbackend.business.user_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.get.users.HandleForgottenPasswordRequest;
-import nl.fontys.s3.dinemasterpro.business.email_services.SendEmail;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.persistence.entity.CustomerEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.UserEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.get.users.HandleForgottenPasswordRequest;
+import nl.fontys.s3.dinemasterbackend.business.email_services.SendEmail;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.CustomerEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.UserEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,7 +1,7 @@
 package nl.fontys.s3.dinemasterbackend.business.converters;
 
-import nl.fontys.s3.dinemasterpro.domain.classes.Address;
-import nl.fontys.s3.dinemasterpro.persistence.entity.AddressEntity;
+import nl.fontys.s3.dinemasterbackend.domain.classes.Address;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.AddressEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

@@ -1,12 +1,12 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
-import nl.fontys.s3.dinemasterpro.business.dtos.update.orders.UpdateSelectedItemStatusRequest;
-import nl.fontys.s3.dinemasterpro.business.exceptions.NotFound;
-import nl.fontys.s3.dinemasterpro.business.exceptions.OperationNotPossible;
-import nl.fontys.s3.dinemasterpro.persistence.entity.SelectedItemEntity;
-import nl.fontys.s3.dinemasterpro.persistence.entity.SelectedItemStatusOfPreparationEntity;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.SelectedItemEntityRepository;
-import nl.fontys.s3.dinemasterpro.persistence.repositories.SelectedItemStatusOfPreparationEntityRepository;
+import nl.fontys.s3.dinemasterbackend.business.dtos.update.orders.UpdateSelectedItemStatusRequest;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.NotFound;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.OperationNotPossible;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.SelectedItemEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.entity.SelectedItemStatusOfPreparationEntity;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.SelectedItemEntityRepository;
+import nl.fontys.s3.dinemasterbackend.persistence.repositories.SelectedItemStatusOfPreparationEntityRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
