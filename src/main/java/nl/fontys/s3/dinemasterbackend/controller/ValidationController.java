@@ -10,9 +10,11 @@ import lombok.AllArgsConstructor;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.CalculateDeliveryFeeResponse;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressRequest;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressResponse;
+import nl.fontys.s3.dinemasterbackend.business.exceptions.OperationNotPossible;
 import nl.fontys.s3.dinemasterbackend.business.order_use_cases.CalculateDeliveryFee;
 import nl.fontys.s3.dinemasterbackend.business.validation_services.ValidateAddress;
 import org.cloudinary.json.JSONArray;
+import org.cloudinary.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +25,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/validation")
@@ -68,44 +72,73 @@ public class ValidationController {
         String coordinates = firstResultLatLng.getLat().toString() + "," + firstResultLatLng.getLng().toString();
 
                     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Coordinate"+ coordinates);
+    }
 
 
-//        String fullAddress = String.format("%s, %s, %s, %s",
-//                request.getStreet(), request.getCity(), request.getPostalCode(), request.getCountry());
-//        String nominatimURL = String.format("https://nominatim.openstreetmap.org/search?q=%s&format=json&addressdetails=1",
-//                UriUtils.encode(fullAddress, StandardCharsets.UTF_8));
+    @PostMapping("/test-public-api-calc-del-fee")
+    public ResponseEntity<String> testDeliveryFee(@RequestParam(value = "deliveryPointLatitude", required = true) String deliveryPointLatitude,
+                                                  @RequestParam(value = "deliveryPointLongitude", required = true) String deliveryPointLongitude) {
+
+        String deliveryPointCoordinates = deliveryPointLatitude + "," + deliveryPointLongitude;
+        String RESTAURANT_COORDINATES = "51.437446,5.479871";
+        String apiKey = "c224ce090d2945dabe2114447a556c83";
+
+        String apiUrl = String.format(
+                "https://api.geoapify.com/v1/routing?waypoints=%s|%s&mode=drive&apiKey=%s",
+                RESTAURANT_COORDINATES, deliveryPointCoordinates, apiKey
+        );
+
+        Map<String, Double> resultMap = new HashMap<>();
+
+        try {
+            URL url = new URL(apiUrl);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            StringBuilder jsonResponse = new StringBuilder();
+
+            while ((inputLine = in.readLine()) != null) {
+                jsonResponse.append(inputLine);
+            }
+            in.close();
+
+            JSONObject responseObject = new JSONObject(jsonResponse.toString());
+
+            JSONArray featuresArray = responseObject.getJSONArray("features");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("array: " + featuresArray);
 //
-//        try {
-//            URL url = new URL(nominatimURL);
-//            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//            conn.setRequestMethod("GET");
-//            conn.setRequestProperty("User-Agent", "DineMasterPro/1.0");
+//            if (featuresArray.length() > 0) {
+//                JSONObject properties = featuresArray.getJSONObject(0).getJSONObject("properties");
 //
-//            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//            String inputLine;
-//            StringBuilder response = new StringBuilder();
+//                double distanceInMeters = properties.getDouble("distance");
+//                double durationInSeconds = properties.getDouble("time");
 //
+//                double distanceInKm = distanceInMeters / 1000.0;
+//                double durationInMinutes = durationInSeconds / 60.0;
 //
-//            while ((inputLine = in.readLine()) != null) {
-//                response.append(inputLine);
+//                if (distanceInKm > 15) {
+//                    throw new OperationNotPossible("Provided address is out of delivery range");
+//                }
+//
+//                resultMap.put("distance", distanceInKm);
+//                resultMap.put("duration", durationInMinutes);
+//                String results = distanceInKm + ", "
+//                        + durationInMinutes;
+//
+//                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Fouund: " + results);
+//
 //            }
-//            in.close();
 //
-//
-//            JSONArray jsonArray = new JSONArray(response.toString());
-//            if (jsonArray.length() > 0) {
-//                String lat = jsonArray.getJSONObject(0).getString("lat");
-//                String lon = jsonArray.getJSONObject(0).getString("lon");
-//                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("TRUE");
-//            }
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("False");
-//        }
-//         catch (Exception e) {
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error: " + e.getMessage());
-//        }
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("No address found");
 
-        //            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error: " + e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error: " + e.getMessage());
+        }
+
+
+
 
 
     }

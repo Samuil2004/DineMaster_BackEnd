@@ -32,7 +32,7 @@ public class CalculateDeliveryFeeImpl implements CalculateDeliveryFee {
     public CalculateDeliveryFeeResponse calculateDeliveryFee(ValidateAddressRequest request) {
         ValidateAddressResponse validatedAddress = validateAddress.isAddressValid(request);
         if (Boolean.TRUE.equals(validatedAddress.getIsValid())) {
-            Map<String, Double> durationAndDistanceOfDelivery = calculateDistance.calculateDistanceBetweenRestaurantAndDeliveryPoint(validatedAddress.getLocationLongitude(), validatedAddress.getLocationLatitude());
+            Map<String, Double> durationAndDistanceOfDelivery = calculateDistance.calculateDistanceBetweenRestaurantAndDeliveryPoint(validatedAddress.getLocationLatitude(), validatedAddress.getLocationLongitude());
             Double distance = durationAndDistanceOfDelivery.get("distance");
 
             double fee = STARTING_FEE + BASE_FEE_PER_KM * distance;

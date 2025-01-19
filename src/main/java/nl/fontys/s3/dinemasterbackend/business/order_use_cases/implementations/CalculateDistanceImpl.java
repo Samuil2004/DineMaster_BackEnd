@@ -27,7 +27,8 @@ public class CalculateDistanceImpl implements CalculateDistance {
 
     @Override
     public Map<String, Double> calculateDistanceBetweenRestaurantAndDeliveryPoint(String deliveryPointLatitude, String deliveryPointLongitude) {
-        String deliveryPointCoordinates = deliveryPointLongitude + "," + deliveryPointLatitude;
+        //String deliveryPointCoordinates = deliveryPointLongitude + "," + deliveryPointLatitude;
+        String deliveryPointCoordinates = deliveryPointLatitude + "," + deliveryPointLongitude;
 
         String apiUrl = String.format(
                 "https://api.geoapify.com/v1/routing?waypoints=%s|%s&mode=drive&apiKey=%s",
