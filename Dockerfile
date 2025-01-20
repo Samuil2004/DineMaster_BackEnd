@@ -21,6 +21,7 @@ FROM openjdk:17-jdk-slim
 # Set working directory inside the container
 WORKDIR /opt/app
 
+
 # Copy the built JAR file from the previous stage
 COPY --from=build /app/build/libs/DineMasterBackEnd-0.0.1-SNAPSHOT.jar ./DineMasterBackEnd-0.0.1-SNAPSHOT.jar
 
