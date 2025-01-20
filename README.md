@@ -19,12 +19,13 @@ Canim is a beloved local restaurant known for its exceptional cuisine and welcom
 2. [Technologies Used](#technologies-used)
 3. [Tests](#tests)
 4. [Requirements](#requirements)
-5. [Setup and Installation](#setup-and-installation)
-6. [API Overview](#api-overview)
-7. [Continuous Integration/Deployment](#continuous-integrationdeployment)
-8. [Security](#security)
-9. [Contributing](#contributing)
-10. [License](#license)
+5. [Documentation](#documentation)
+6. [Setup and Installation](#setup-and-installation)
+7. [API Overview](#api-overview)
+8. [Continuous Integration/Deployment](#continuous-integrationdeployment)
+9. [Security](#security)
+10. [Contributing](#contributing)
+11. [License](#license)
 
 ---
 
@@ -123,6 +124,29 @@ The codebase achieves high-quality standards, as verified by SonarQube's static 
 - **MySQL**: Version 8.0 or higher
 - **Docker**: For containerization
 - **GitLab Runner**: For CI/CD pipelines
+
+---
+
+## Documentation
+* in /Documents
+
+- **Design Document**
+  * All architectural decisions made
+  * All tools used
+  * `C4` diagrams
+  * `ERD`
+  * `UML` diagram
+  * `Git branching strategy`
+  * `CI/CD` Pipeline explanation
+- **Web Performance Report**
+  * `Lighthouse` performance results
+  * `JMeter` performance results
+- **Project Plan**
+  * Description of what the project is about
+  * Description of the problem it solves
+  * Other relevant to the project information
+- **Security Report**
+  * Report on the application meeting the top `10 OWASP prinisples`
 
 ---
 
