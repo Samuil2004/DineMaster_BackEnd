@@ -32,9 +32,9 @@ sonarqube {
 //    password = System.getenv("SPRING_DATASOURCE_PASSWORD_STAGING")
 //}
 flyway {
-    url = 'jdbc:mysql://localhost:3306/flyway_dine_master_db_dev'
-    user = 'root'
-    password = 'password'
+    url = 'jdbc:mysql://sql8.freesqldatabase.com:3306/sql8758370'
+    user = 'sql8758370'
+    password = 'tu8pdpCBn7'
 }
 
 jacocoTestReport {
