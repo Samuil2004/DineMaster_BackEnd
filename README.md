@@ -156,7 +156,7 @@ The codebase achieves high-quality standards, as verified by SonarQube's static 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-repo/dinemaster-backend.git
-   cd dinemaster-backend
+
    
 ## API Overview
 
