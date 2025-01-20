@@ -1,5 +1,6 @@
 package nl.fontys.s3.dinemasterbackend.business.order_use_cases.implementations;
 
+import lombok.AllArgsConstructor;
 import nl.fontys.s3.dinemasterbackend.business.exceptions.OperationNotPossible;
 import nl.fontys.s3.dinemasterbackend.business.order_use_cases.CalculateDistance;
 import org.cloudinary.json.JSONArray;
@@ -15,14 +16,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@AllArgsConstructor
 public class CalculateDistanceImpl implements CalculateDistance {
 
     private static final String RESTAURANT_COORDINATES = "51.437446,5.479871";
-    private final String apiKey;
+    private final String apiKey = "c224ce090d2945dabe2114447a556c83";
 
-    public CalculateDistanceImpl(@Value("${geoapify.key}") String apiKey) {
-        this.apiKey = apiKey;
-    }
+//    public CalculateDistanceImpl(@Value("${geoapify.key}") String apiKey) {
+//        this.apiKey = apiKey;
+//    }
 
 
     @Override

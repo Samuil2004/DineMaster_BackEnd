@@ -20,14 +20,21 @@ sonarqube {
         property "sonar.projectKey", "DineMasterPro"
         property "sonar.projectName", "DineMasterPro"
         property "sonar.host.url", "http://localhost:9000"
-        property "sonar.token", System.getenv("SONARQUBE_TOKEN")
+//        property "sonar.token", System.getenv("SONARQUBE_TOKEN")
+        property "sonar.token", "sqp_deb86bf4e2ba7c1f8c861f0ad42b34a6f8c39777"
+
     }
 }
 
+//flyway {
+//    url = System.getenv("SPRING_DATASOURCE_URL_STAGING")
+//    user = System.getenv("SPRING_DATASOURCE_USERNAME_STAGING")
+//    password = System.getenv("SPRING_DATASOURCE_PASSWORD_STAGING")
+//}
 flyway {
-    url = System.getenv("SPRING_DATASOURCE_URL_STAGING")
-    user = System.getenv("SPRING_DATASOURCE_USERNAME_STAGING")
-    password = System.getenv("SPRING_DATASOURCE_PASSWORD_STAGING")
+    url = 'jdbc:mysql://localhost:3306/flyway_dine_master_db_dev'
+    user = 'root'
+    password = 'password'
 }
 
 jacocoTestReport {

@@ -4,6 +4,7 @@ import com.opencagedata.jopencage.JOpenCageGeocoder;
 import com.opencagedata.jopencage.model.JOpenCageForwardRequest;
 import com.opencagedata.jopencage.model.JOpenCageLatLng;
 import com.opencagedata.jopencage.model.JOpenCageResponse;
+import lombok.AllArgsConstructor;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressRequest;
 import nl.fontys.s3.dinemasterbackend.business.dtos.get.ValidateAddressResponse;
 import nl.fontys.s3.dinemasterbackend.business.validation_services.ValidateAddress;
@@ -12,11 +13,12 @@ import org.springframework.stereotype.Service;
 
 
 @Service
+@AllArgsConstructor
 public class ValidateAddressImpl implements ValidateAddress {
-    private final String apiKey;
-    public ValidateAddressImpl(@Value("${openCage.key}") String apiKey) {
-        this.apiKey = apiKey;
-    }
+    private final String apiKey = "bbe24e79785a4c44b59bf417e2174cb0";
+//    public ValidateAddressImpl(@Value("${openCage.key}") String apiKey) {
+//        this.apiKey = apiKey;
+//    }
 
     @Override
     public ValidateAddressResponse isAddressValid(ValidateAddressRequest validationRequest) {
