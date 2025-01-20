@@ -25,9 +25,9 @@ sonarqube {
 }
 
 flyway {
-    url = System.getenv("SPRING_DATASOURCE_URL")
-    user = System.getenv("SPRING_DATASOURCE_USERNAME")
-    password = System.getenv("SPRING_DATASOURCE_PASSWORD")
+    url = System.getenv("SPRING_DATASOURCE_URL_STAGING")
+    user = System.getenv("SPRING_DATASOURCE_USERNAME_STAGING")
+    password = System.getenv("SPRING_DATASOURCE_PASSWORD_STAGING")
 }
 
 jacocoTestReport {
