@@ -113,7 +113,8 @@ The application is rigorously tested to ensure reliability and correctness:
 ### SonarQube Dashboard
 The codebase achieves high-quality standards, as verified by SonarQube's static code analysis. The SonarQube gateway passes with all required metrics met.
 
-[Insert SonarQube Dashboard Image Here]
+<img width="1494" alt="Screenshot 2025-01-20 at 10 53 51" src="https://github.com/user-attachments/assets/9a38ff38-1b77-4f2c-b0b2-f40d80ddb9fc" />
+
 
 ---
 
@@ -184,6 +185,9 @@ The project follows a CI/CD pipeline to automate testing, code quality checks, a
 2. **Test**: Runs unit and integration tests to ensure correctness.
 3. **SonarQube**: Static code analysis is performed to check for code quality and ensure adherence to best practices.
 4. **Docker**: Builds and deploys a Docker image of the backend application for containerized deployment.
+   
+![Backend pipeline](https://github.com/user-attachments/assets/9a1661f2-879e-45c9-94d8-9829a1bfd5c8)
+
 
 * The yaml file can be found in the root directory of the project 
 
