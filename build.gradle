@@ -92,7 +92,7 @@ dependencies {
     //For mailing system
     implementation 'org.springframework.boot:spring-boot-starter-mail:3.4.1'
 
-    implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+    //implementation 'io.github.cdimascio:java-dotenv:5.2.2'
 
 }
 
