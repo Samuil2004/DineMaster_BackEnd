@@ -52,7 +52,7 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    implementation 'mysql:mysql-connector-java:8.0.30'
+    //implementation 'mysql:mysql-connector-java:8.0.30'
 
 
     implementation 'org.flywaydb:flyway-core:10.20.1'
