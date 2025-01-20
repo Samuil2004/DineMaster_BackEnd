@@ -30,13 +30,13 @@ Canim is a beloved local restaurant known for its exceptional cuisine and welcom
 
 ## Features
 
-- **Role-Based Access**: Provides access control for customers, managers, kitchen staff, and delivery personnel.
+- **`Role-Based Access`**: Provides access control for customers, managers, kitchen staff, and delivery personnel.
 - **Order Management**: Real-time order updates and tracking.
-- **Menu Management**: CRUD operations for managing menu items.
+- **Menu Management**: `CRUD` operations for managing menu items.
 - **Database Migrations**: Version-controlled schema management with Flyway.
 - **Location Services**: Geocoding and routing integration for delivery.
-- **Dynamic Delivery Fee Calculation**: The delivery fee is calculated based on the distance between the restaurant and the user-provided address. The restaurant does not offer deliveries outside of the delivery range (20km). 
-- **Secure Email Functionality**: Password recovery using SMTP Gmail service.
+- **`Dynamic Delivery Fee Calculation`**: The delivery fee is calculated based on the distance between the restaurant and the user-provided address. The restaurant does not offer deliveries outside of the delivery range (20km). 
+- **Secure `Email` Functionality**: Password recovery using SMTP Gmail service.
 - **Scalable Architecture**: Built using SOLID principles for maintainability and scalability.
 
 ---
@@ -45,29 +45,29 @@ Canim is a beloved local restaurant known for its exceptional cuisine and welcom
 
 ### Tech Stack
 
-- **Main Language**: Java (Spring Boot)
-- **Database**: MySQL (Flyway for database migrations)
-- **ORM**: Hibernate (JPA for data access)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Image Storage**: Cloudinary
-- **Containerization**: Docker
-- **Geolocation Services**: OpenCage Geocoding, Geoapify
-- **Email Service**: SMTP Gmail Service
-- **CI/CD**: GitLab CI/CD Pipeline
-- **Testing**: Mockito, JUnit in-memory databases for persistence tests
+- **Main Language**: `Java` (`Spring Boot`)
+- **Database**: `MySQL` (`Flyway` for database migrations)
+- **ORM**: `Hibernate` (`JPA` for data access)
+- **Authentication**: `JWT` (JSON Web Tokens)
+- **Image Storage**: `Cloudinary`
+- **Containerization**: `Docker`
+- **`Geolocation Services`**: OpenCage Geocoding, Geoapify
+- **Email Service**: `SMTP Gmail Service`
+- **CI/CD**: GitLab `CI/CD Pipeline`
+- **Testing**: `Mockito`, `JUnit` in-memory databases for persistence tests
 
 ### **Java Spring Boot**
-Java Spring Boot is the core framework used to build scalable and maintainable RESTful web services. It naturally supports SOLID principles:
-- **Single Responsibility Principle (SRP)**: Separation of concerns into layers like controllers, services, and persistence.
-- **Open-Closed Principle (OCP)**: Components are extensible without modifying existing code.
-- **Liskov Substitution Principle (LSP)**: Interface-based development allows flexible component replacement.
-- **Interface Segregation Principle (ISP)**: Specific interfaces for distinct use cases ensure modularity.
-- **Dependency Inversion Principle (DIP)**: Uses IoC and dependency injection for flexibility.
+Java Spring Boot is the core framework used to build scalable and maintainable `RESTful` web services. It naturally supports `SOLID` principles:
+- **Single Responsibility Principle (`SRP`)**: Separation of concerns into layers like controllers, services, and persistence.
+- **Open-Closed Principle (`OCP`)**: Components are extensible without modifying existing code.
+- **Liskov Substitution Principle (`LSP`)**: Interface-based development allows flexible component replacement.
+- **Interface Segregation Principle (`ISP`)**: Specific interfaces for distinct use cases ensure modularity.
+- **Dependency Inversion Principle (`DIP`)**: Uses IoC and dependency injection for flexibility.
 
 ### **JPA and Hibernate**
-- The application uses **Spring Data JPA** for Object-Relational Mapping (ORM), enabling seamless database interaction.
-- **Hibernate** serves as the ORM provider, simplifying data persistence and retrieval.
-- JPA and Hibernate ensure clean and efficient data access by abstracting SQL complexities, improving maintainability.
+- The application uses **`Spring Data JPA`** for Object-Relational Mapping (`ORM`), enabling seamless database interaction.
+- **`Hibernate`** serves as the ORM provider, simplifying data persistence and retrieval.
+- JPA and Hibernate ensure clean and efficient data access by abstracting `SQL complexities`, improving maintainability.
 
 ### **MySQL**
 Used for structured data storage due to its reliability, performance, and ability to handle complex queries.
@@ -82,8 +82,8 @@ Handles image storage and optimization. The backend uploads images securely, whi
 - Automatic image optimization to improve performance.
 
 ### **Docker**
-- Docker is used to containerize the application, ensuring consistency across environments.
-- The CI/CD pipeline builds and deploys a Docker image for easy integration into various deployment setups.
+- `Docker` is used to containerize the application, ensuring consistency across environments.
+- The `CI/CD pipeline` builds and deploys a Docker image for easy integration into various deployment setups.
 
 ### **JWT Authentication**
 - The application uses **JSON Web Tokens (JWT)** for secure authentication and session management.
@@ -105,7 +105,7 @@ Simplifies email functionality, such as sending password recovery emails, withou
 
 ### Overview
 The application is rigorously tested to ensure reliability and correctness:
-- **Business Layer Tests**: Over 80% of the business logic has been covered by unit tests, ensuring that critical functionality works as expected.
+- **Business Layer Tests**: Over `80%`` of the business logic has been covered by unit tests, ensuring that critical functionality works as expected.
 - **Controller Tests**: Tested using `@WithMockUser` to verify API endpoints with various roles and permissions.
 - **Persistence Tests**: Repository tests are conducted using an in-memory database to validate data storage and retrieval operations.
 
